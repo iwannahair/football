@@ -4,12 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>华辉体育用品 - 优质足球制造商与出口商</title>
+    <!-- 性能优化：预加载背景图 -->
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&q=60&w=1200">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
         body { font-family: 'Inter', sans-serif; }
-        .hero-gradient { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&q=80&w=1920'); background-size: cover; background-position: center; }
+        
+        /* 优化后的 Hero 样式 */
+        .hero-gradient { 
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        #1a365d url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&q=60&w=1200'); 
+            background-size: cover; 
+            background-position: center;
+            background-repeat: no-repeat;
+            /* 添加淡入效果，减少突兀感 */
+            animation: fadeIn 1.2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0.8; }
+            to { opacity: 1; }
+        }
+
         .product-card:hover .product-overlay { opacity: 1; }
     </style>
 </head>
@@ -60,7 +78,7 @@
         </div>
     </nav>
 
-    <!-- Hero 视觉区 -->
+    <!-- Hero 视觉区 (已应用优化方案) -->
     <section class="hero-gradient h-[600px] flex items-center text-white px-4">
         <div class="max-w-7xl mx-auto w-full">
             <div class="max-w-2xl">
@@ -125,7 +143,7 @@
                 <!-- 产品卡片 1 -->
                 <div class="bg-white rounded-xl overflow-hidden shadow-sm group">
                     <div class="relative overflow-hidden aspect-square">
-                        <img src="https://images.unsplash.com/photo-1552318975-275e057f3565?auto=format&fit=crop&q=80&w=600" alt="Match Ball" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                        <img src="https://images.unsplash.com/photo-1552318975-275e057f3565?auto=format&fit=crop&q=80&w=600" alt="Match Ball" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy">
                         <div class="absolute top-4 left-4 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">HOT</div>
                     </div>
                     <div class="p-5">
@@ -141,7 +159,7 @@
                 <!-- 产品卡片 2 -->
                 <div class="bg-white rounded-xl overflow-hidden shadow-sm group">
                     <div class="relative overflow-hidden aspect-square">
-                        <img src="https://images.unsplash.com/photo-1614632537423-1e6c2e7e0aab?auto=format&fit=crop&q=80&w=600" alt="Training Ball" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                        <img src="https://images.unsplash.com/photo-1614632537423-1e6c2e7e0aab?auto=format&fit=crop&q=80&w=600" alt="Training Ball" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy">
                     </div>
                     <div class="p-5">
                         <h3 class="font-bold text-gray-900 mb-1">标准训练级机缝球</h3>
@@ -156,7 +174,7 @@
                 <!-- 产品卡片 3 -->
                 <div class="bg-white rounded-xl overflow-hidden shadow-sm group">
                     <div class="relative overflow-hidden aspect-square">
-                        <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&q=80&w=600" alt="Futsal" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                        <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&q=80&w=600" alt="Futsal" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy">
                     </div>
                     <div class="p-5">
                         <h3 class="font-bold text-gray-900 mb-1">室内五人制低弹球</h3>
@@ -171,7 +189,7 @@
                 <!-- 产品卡片 4 -->
                 <div class="bg-white rounded-xl overflow-hidden shadow-sm group">
                     <div class="relative overflow-hidden aspect-square">
-                        <img src="https://images.unsplash.com/photo-1552667466-07770ae110d0?auto=format&fit=crop&q=80&w=600" alt="Promotional Ball" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                        <img src="https://images.unsplash.com/photo-1552667466-07770ae110d0?auto=format&fit=crop&q=80&w=600" alt="Promotional Ball" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy">
                         <div class="absolute top-4 left-4 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">PROMO</div>
                     </div>
                     <div class="p-5">
